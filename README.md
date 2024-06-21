@@ -76,11 +76,11 @@ upon input, such as whether the file is full of illegal characters, or
 whether UTF-8 is being handled. The first test file is downloaded
 from the Internet as "real-world data", while the others are generated
 using a program built with this project (`wctool`).
-* `pocorgtfo18.pdf` a large 92-million byte PDF file that contains binary/illegal characters
+* `pocorgtfo18.pdf` a large 92-million-byte PDF file that contains binary/illegal characters
 * `ascii.txt` a file the same size containing random words, ASCII-only
 * `utf8.txt` a file containing random UTF-8 sequences of 1, 2, 3, and 4 bytes
-* `word.txt` a file containing 92-million 'x' characters
-* `space.txt` a file containing 92-million ' ' (space) characters
+* `word.txt` a file containing 92 million 'x' characters
+* `space.txt` a file containing 92 million ' ' (space) characters
 
 Before benchmarking the old `wc`, set the character-set to UTF-8. It's
 probably already set to this on new systems, but do this to make sure:
@@ -88,9 +88,9 @@ probably already set to this on new systems, but do this to make sure:
     $ export LC_CTYPE=en_US.UTF-8
 
 When running `wc`, the `-lwc` is the default for counting words in ASCII text.
-To convert it into UTF-8 "multi-byte" mode, change `c` o `m`, as in `-lwm`.
+To convert it into UTF-8 "multi-byte" mode, change `c` to `m`, as in `-lwm`.
 
-The numbers are reported come from the Unix `time` command, the number of seconds for
+The numbers that are reported come from the Unix `time` command, the number of seconds for
 `user` time. In other words, `elapsed` time or `system` time aren't reported.
 
 The following table shows benchmarking a 2019 x86 MacBook Air of the old
@@ -146,7 +146,7 @@ These results tell us:
 * I don't know why Node.js behaves differently on macOS and Linux, it's probably just
   due to different versions.
 * A JIT (like NodeJS) works well with simple compute algorithms. This tells
-  us little about it's relative performance in larger programs. All languages
+  us little about its relative performance in larger programs. All languages
   that have a JIT should compile this sort of algorithm to roughly the same
   speed.
 
