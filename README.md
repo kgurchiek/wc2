@@ -90,7 +90,7 @@ probably already set to this on new systems, but do this to make sure:
 When running `wc`, the `-lwc` is the default for counting words in ASCII text.
 To convert it into UTF-8 "multi-byte" mode, change `c` to `m`, as in `-lwm`.
 
-The numbers that are reported come from the Unix `time` command, the number of seconds for
+The numbers are reported come from the Unix `time` command, the number of seconds for
 `user` time. In other words, `elapsed` time or `system` time aren't reported.
 
 The following table shows benchmarking a 2019 x86 MacBook Air of the old
@@ -146,7 +146,7 @@ These results tell us:
 * I don't know why Node.js behaves differently on macOS and Linux, it's probably just
   due to different versions.
 * A JIT (like NodeJS) works well with simple compute algorithms. This tells
-  us little about its relative performance in larger programs. All languages
+  us little about it's relative performance in larger programs. All languages
   that have a JIT should compile this sort of algorithm to roughly the same
   speed.
 
